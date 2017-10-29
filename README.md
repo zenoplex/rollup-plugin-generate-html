@@ -1,5 +1,7 @@
 # rollup-plugin-generate-html
 
+[![Build Status](https://travis-ci.org/zenoplex/rollup-plugin-generate-html.svg?branch=master)](https://travis-ci.org/zenoplex/rollup-plugin-generate-html)
+
 Simple rollup plugin to generate html file.  Currently html file will be placed in same directory as the output file.
 This plugin is inspired from [rollup-plugin-fill-html](https://github.com/alwaysonlinetxm/rollup-plugin-fill-html).
 
