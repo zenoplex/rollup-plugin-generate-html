@@ -15,6 +15,7 @@ type OutputOptions = {
 type PluginOptions = {
   template?: string,
   filename?: string,
+  publicPath?: string,
 }
 
 type Plugin = PluginOptions => ({
@@ -22,14 +23,15 @@ type Plugin = PluginOptions => ({
   onwrite: OutputOptions => void,
 })
 
-const plugin: Plugin = ({ template, filename = 'index.html' } = {}) => ({
+const plugin: Plugin = ({ template, filename = 'index.html', publicPath } = {}) => ({
   name: 'generate-html',
   onwrite(config) {
     const { file } = config;
     const parsedPath = path.parse(file);
     const htmlPath = path.resolve(parsedPath.dir, filename);
-    const src = `./${parsedPath.name}${parsedPath.ext}`;
-
+    const src = publicPath
+      ? `/${path.relative(publicPath, file)}`
+      : `./${parsedPath.name}${parsedPath.ext}`;
     const $ = cheerio.load(template
       ? fs.readFileSync(template).toString()
       : '');
