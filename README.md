@@ -22,10 +22,12 @@ export default [{
   },
   plugins: [
     html({
-      // specify template html
+      // specify template html (optional)
       template: './index.html',  // Default undefined
-      // output filename
+      // output filename (optional)
       filename: 'some.html', // Default index.html
+      // when specified, js src will use absolute path from publicPath (optional)
+      publicPath: 'dist' // Default undefined
     })
   ]
 }];
