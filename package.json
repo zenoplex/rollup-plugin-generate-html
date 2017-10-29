@@ -1,7 +1,7 @@
 {
   "name": "@gen/rollup-plugin-generate-html",
   "version": "0.0.1",
-  "description": "html generation plugin for rollup",
+  "description": "Simple html generation plugin for rollup",
   "main": "dist/rollup-plugin-generate-html.cjs.js",
   "module": "dist/rollup-plugin-generate-html.esm.js",
   "scripts": {
@@ -46,7 +46,7 @@
   "engines": {
     "node": "^8.8.0"
   },
-  "repository": "",
+  "repository": "zenoplex/rollup-plugin-generate-html",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2"
   }
