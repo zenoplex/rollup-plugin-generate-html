@@ -1,6 +1,6 @@
 {
   "name": "@gen/rollup-plugin-generate-html",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Simple html generation plugin for rollup",
   "main": "dist/rollup-plugin-generate-html.cjs.js",
   "module": "dist/rollup-plugin-generate-html.esm.js",
