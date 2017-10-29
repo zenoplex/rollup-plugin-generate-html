@@ -1,0 +1,53 @@
+{
+  "name": "@gen/rollup-plugin-generate-html",
+  "version": "0.0.1",
+  "description": "html generation plugin for rollup",
+  "main": "dist/rollup-plugin-generate-html.cjs.js",
+  "module": "dist/rollup-plugin-generate-html.esm.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "lint": "eslint .",
+    "typecheck": "flow check",
+    "build": "NODE_ENV=production rollup -c",
+    "dev": "rollup -c -w",
+    "test": "npm run lint && npm run typecheck && jest",
+    "test:watch": "jest --watch",
+    "prepare": "npm run build"
+  },
+  "author": "Gen Ichino",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-import": "^2.8.0",
+    "flow-bin": "^0.57.3",
+    "flow-typed": "^2.2.1",
+    "jest": "^20.0.4",
+    "rollup": "^0.50.0",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-commonjs": "^8.2.5",
+    "rollup-plugin-node-resolve": "^3.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "rollup",
+    "rollup-plugin",
+    "html",
+    "html-generate"
+  ],
+  "engines": {
+    "node": "^8.8.0"
+  },
+  "repository": "",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2"
+  }
+}
