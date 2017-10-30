@@ -43,9 +43,6 @@
     "html",
     "html-generate"
   ],
-  "engines": {
-    "node": "^8.8.0"
-  },
   "repository": "zenoplex/rollup-plugin-generate-html",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2"
